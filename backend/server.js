@@ -7,7 +7,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-db.pool.query(`CREATE TABLE lists (
+db.pool.query(`CREATE TABLE IF NOT EXISTS lists (
     id INTEGER AUTO_INCREMENT,
     value TEXT,
     PRIMARY KEY (id)
