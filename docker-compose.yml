@@ -36,20 +36,20 @@ services:
       MYSQL_DATABASE: myapp
       MYSQL_PORT: 3306 
 
-  mariadb:
-    build: ./mariadb
-    restart: always
-    container_name: app_mariadb
-    ports:
-      - "3306:3306"
-    volumes:
-      - mariadbvolume:/var/lib/mysql
-      - ./mariadb/sqls/:/docker-entrypoint-initdb.d/
-    environment:
-      MYSQL_ROOT_PASSWORD: nmnnhlba
-      MYSQL_DATABASE: myapp
-      MYSQL_PORT: 3306   
+#   mariadb:
+#     build: ./mariadb
+#     restart: always
+#     container_name: app_mariadb
+#     ports:
+#       - "3306:3306"
+#     volumes:
+#       - mariadbvolume:/var/lib/mysql
+#       - ./mariadb/sqls/:/docker-entrypoint-initdb.d/
+#     environment:
+#       MYSQL_ROOT_PASSWORD: nmnnhlba
+#       MYSQL_DATABASE: myapp
+#       MYSQL_PORT: 3306   
 
-volumes:
-  mariadbvolume:
-    driver: local
+# volumes:
+#   mariadbvolume:
+#     driver: local
